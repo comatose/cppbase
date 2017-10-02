@@ -7,8 +7,6 @@
 #include <sstream>
 #include <stdexcept>
 
-#include "cppbase/factorial.hpp"
-
 namespace cppbase
 {
 
