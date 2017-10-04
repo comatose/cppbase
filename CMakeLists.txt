@@ -6,7 +6,8 @@ cmake_minimum_required(VERSION 2.6)
 
 # Check if project name has been specified correctly.
 if((NOT PROJECT_NAME))
-  message(FATAL_ERROR "Project name must be specified!")
+  get_filename_component(PROJECT_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+  string(REPLACE " " "_" PROJECT_NAME ${PROJECT_NAME})
 endif ((NOT PROJECT_NAME))
 if(${PROJECT_NAME} MATCHES " ")
     message(FATAL_ERROR "Project name cannot contain spaces!")
